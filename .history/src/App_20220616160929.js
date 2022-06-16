@@ -1,10 +1,9 @@
 import "./App.css";
-import TopPage from "./pages/TopPage";
 
 function App() {
   return (
-    <div>
-      <TopPage />
+    <div className="App">
+      <h1>おはよう</h1>
     </div>
   );
 }

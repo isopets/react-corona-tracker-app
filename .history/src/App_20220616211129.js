@@ -3,7 +3,8 @@ import TopPage from "./pages/TopPage";
 
 function App() {
   return (
-    <div>
+    <div className="App">
+      <h1>こんばんは</h1>
       <TopPage />
     </div>
   );

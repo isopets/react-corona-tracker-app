@@ -3,7 +3,7 @@ import TopPage from "./pages/TopPage";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <TopPage />
     </div>
   );
