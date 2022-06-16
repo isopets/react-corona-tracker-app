@@ -3,12 +3,9 @@ const Selector = () => {
   return (
     <div>
       <select>
-        {countriesJson.map((country, index) => (
-          <option>
-            {index}
-            {country.Country}
-          </option>
-        ))}
+        <option>United States</option>
+        <option>China</option>
+        <option>Japan</option>
       </select>
     </div>
   );

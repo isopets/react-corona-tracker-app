@@ -1,14 +1,12 @@
 import countriesJson from "../countries.json";
 const Selector = () => {
+  console.log(countriesJson);
   return (
     <div>
       <select>
-        {countriesJson.map((country, index) => (
-          <option>
-            {index}
-            {country.Country}
-          </option>
-        ))}
+        <option>United States</option>
+        <option>China</option>
+        <option>Japan</option>
       </select>
     </div>
   );
