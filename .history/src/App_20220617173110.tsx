@@ -19,7 +19,7 @@ interface SingleCountriesDataType {
 }
 interface AllCountriesDataType extends Array<SingleCountriesDataType> {}
 function App() {
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState(false);
   const [country, setCountry] = useState<string>("japan");
   const [countryData, setCountryData] = useState<CountryDataType>({
     date: "",

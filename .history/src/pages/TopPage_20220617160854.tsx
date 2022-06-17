@@ -4,13 +4,10 @@ import Selector from "../components/Selector";
 import Results from "../components/Results";
 
 type TopPageType = {
-  countriesJson: {
-    Country: "string";
-    Slug: "string";
-  }[];
-  setCountry: React.Dispatch<React.SetStateAction<string>>;
+  ountriesJson;
+  setCountry;
   countryData: {
-    date: "string";
+    date: "string",
     newConfirmed: 0;
     totalConfirmed: 0;
     newRecovered: 0;
@@ -18,12 +15,7 @@ type TopPageType = {
   };
   loading: boolean;
 };
-const TopPage = ({
-  countriesJson,
-  setCountry,
-  countryData,
-  loading,
-}: TopPageType) => {
+const TopPage = ({countriesJson, setCountry, countryData, loading}) => {
   return (
     <div className="top-page-container">
       <div>

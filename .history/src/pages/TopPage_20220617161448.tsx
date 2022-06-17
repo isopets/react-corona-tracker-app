@@ -18,12 +18,7 @@ type TopPageType = {
   };
   loading: boolean;
 };
-const TopPage = ({
-  countriesJson,
-  setCountry,
-  countryData,
-  loading,
-}: TopPageType) => {
+const TopPage = ({countriesJson, setCountry, countryData, loading}: TopPageType) => {
   return (
     <div className="top-page-container">
       <div>

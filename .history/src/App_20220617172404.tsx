@@ -17,7 +17,7 @@ interface SingleCountriesDataType {
   NewConfirmed: number;
   TotalConfirmed: number;
 }
-interface AllCountriesDataType extends Array<SingleCountriesDataType> {}
+interface AllCountriesDataTypeArray extends Array<SingleCountriesDataType> {}
 function App() {
   const [loading, setLoading] = useState<boolean>(false);
   const [country, setCountry] = useState<string>("japan");
@@ -28,10 +28,9 @@ function App() {
     newRecovered: 0,
     totalRecovered: 0,
   });
-  const [allCountriesData, setAllCountriesData] =
-    useState<AllCountriesDataType>([
-      {Country: "", NewConfirmed: 0, TotalConfirmed: 0},
-    ]);
+  const [allCountriesData, setAllCountriesData] = useState([
+    {Country: "", NewConfirmed: 0, TotalConfirmed: 0},
+  ]);
 
   useEffect(() => {
     const getCountryData = () => {

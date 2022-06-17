@@ -8,7 +8,7 @@ type TopPageType = {
     Country: "string";
     Slug: "string";
   }[];
-  setCountry: React.Dispatch<React.SetStateAction<string>>;
+  setCountry;
   countryData: {
     date: "string";
     newConfirmed: 0;
@@ -18,12 +18,7 @@ type TopPageType = {
   };
   loading: boolean;
 };
-const TopPage = ({
-  countriesJson,
-  setCountry,
-  countryData,
-  loading,
-}: TopPageType) => {
+const TopPage = ({countriesJson, setCountry, countryData, loading}) => {
   return (
     <div className="top-page-container">
       <div>
