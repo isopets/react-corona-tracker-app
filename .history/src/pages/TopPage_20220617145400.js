@@ -20,7 +20,7 @@ const TopPage = ({
           setCountry={setCountry}
           getCountryData={getCountryData}
         />
-        <Results countryData={countryData} loading={loading} />
+        <Results countryData={countryData} />
       </div>
     </div>
   );

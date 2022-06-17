@@ -31,7 +31,6 @@ function App() {
             data[data.length - 1].Recovered - data[data.length - 2].Recovered,
           totalRecovered: data[data.length - 1].Recovered,
         });
-        setLoading(false);
       })
       .catch(err =>
         alert(

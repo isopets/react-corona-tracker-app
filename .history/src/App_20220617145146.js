@@ -18,7 +18,6 @@ function App() {
   const [allCountriesData, setAllCountriesData] = useState([]);
 
   const getCountryData = () => {
-    setLoading(true);
     fetch(`https://api.covid19api.com/country/${country}`)
       .then(res => res.json())
       .then(data => {
@@ -31,7 +30,6 @@ function App() {
             data[data.length - 1].Recovered - data[data.length - 2].Recovered,
           totalRecovered: data[data.length - 1].Recovered,
         });
-        setLoading(false);
       })
       .catch(err =>
         alert(
