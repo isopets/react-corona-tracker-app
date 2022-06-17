@@ -30,6 +30,7 @@ function App() {
   };
   return (
     <div>
+      {console.log()}
       <TopPage
         countriesJson={countriesJson}
         setCountry={setCountry}
