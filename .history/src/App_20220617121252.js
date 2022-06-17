@@ -3,7 +3,6 @@ import countriesJson from "./countries.json";
 import TopPage from "./pages/TopPage";
 import "./App.css";
 import {Route, Switch, BrowserRouter} from "react-router-dom";
-import WorldPage from "./pages/WorldPage";
 
 function App() {
   const [country, setCountry] = useState("");
@@ -14,7 +13,6 @@ function App() {
     newRecovered: "",
     totalRecovered: "",
   });
-  const [allCountriesData, setAllCountriesData] = useState([]);
 
   const getCountryData = () => {
     fetch(`https://api.covid19api.com/country/${country}`)
@@ -31,11 +29,6 @@ function App() {
         });
       });
   };
-  const getAllCountriesData = () => {
-    fetch("https://api.covid19api.com/summary")
-      .then(res => res.json())
-      .then(data => console.log(data.Countries));
-  };
   return (
     <BrowserRouter>
       <Switch>
@@ -46,9 +39,6 @@ function App() {
             getCountryData={getCountryData}
             countryData={countryData}
           />
-        </Route>
-        <Route exact path="/world">
-          <WorldPage />
         </Route>
       </Switch>
     </BrowserRouter>

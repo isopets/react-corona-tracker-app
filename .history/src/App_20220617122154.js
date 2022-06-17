@@ -14,7 +14,6 @@ function App() {
     newRecovered: "",
     totalRecovered: "",
   });
-  const [allCountriesData, setAllCountriesData] = useState([]);
 
   const getCountryData = () => {
     fetch(`https://api.covid19api.com/country/${country}`)
@@ -31,11 +30,6 @@ function App() {
         });
       });
   };
-  const getAllCountriesData = () => {
-    fetch("https://api.covid19api.com/summary")
-      .then(res => res.json())
-      .then(data => console.log(data.Countries));
-  };
   return (
     <BrowserRouter>
       <Switch>
@@ -48,7 +42,7 @@ function App() {
           />
         </Route>
         <Route exact path="/world">
-          <WorldPage />
+          <p>ワールド</p>
         </Route>
       </Switch>
     </BrowserRouter>
