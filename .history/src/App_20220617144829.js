@@ -39,12 +39,7 @@ function App() {
   useEffect(() => {
     fetch("https://api.covid19api.com/summary")
       .then(res => res.json())
-      .then(data => setAllCountriesData(data.Countries))
-      .catch(err =>
-        alert(
-          "エラーが発生しました。ページをリロードして、もう一度トライしてください。"
-        )
-      );
+      .then(data => setAllCountriesData(data.Countries));
   }, []);
   return (
     <BrowserRouter>

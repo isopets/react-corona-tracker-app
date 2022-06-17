@@ -17,7 +17,7 @@ function App() {
   const [allCountriesData, setAllCountriesData] = useState([]);
 
   const getCountryData = () => {
-    fetch(`https://api.covid19api.com/country/${country}`)
+    fetch(`//api.covid19api.com/country/${country}`)
       .then(res => res.json())
       .then(data => {
         setCountryData({
@@ -29,22 +29,12 @@ function App() {
             data[data.length - 1].Recovered - data[data.length - 2].Recovered,
           totalRecovered: data[data.length - 1].Recovered,
         });
-      })
-      .catch(err =>
-        alert(
-          "エラーが発生しました。ページをリロードして、もう一度トライしてください。"
-        )
-      );
+      });
   };
   useEffect(() => {
     fetch("https://api.covid19api.com/summary")
       .then(res => res.json())
-      .then(data => setAllCountriesData(data.Countries))
-      .catch(err =>
-        alert(
-          "エラーが発生しました。ページをリロードして、もう一度トライしてください。"
-        )
-      );
+      .then(data => setAllCountriesData(data.Countries));
   }, []);
   return (
     <BrowserRouter>
