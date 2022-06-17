@@ -7,7 +7,7 @@ const WorldPage = ({allCountriesData}) => {
     <div className="world-page-container">
       <Header />
       <Title />
-      <Card allCountriesData={allCountriesData} />
+      <Card allCountriesData={props.allCountriesData} />
     </div>
   );
 };

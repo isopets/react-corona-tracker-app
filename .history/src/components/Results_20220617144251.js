@@ -1,6 +1,6 @@
 const Results = ({countryData}) => {
   const {date, newConfirmed, totalConfirmed, newRecovered, totalRecovered} =
-    countryData;
+    props.countryData;
 
   return (
     <div className="results-container">
