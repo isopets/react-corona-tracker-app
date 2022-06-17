@@ -28,7 +28,7 @@ body {
     rgba(255, 53, 53, 0.4) 98.63%
   );
   background-size: 400% 400%;
-  animation: gradient 12s ease infinite;
+  /* animation: gradient 12s ease infinite; */
 }
 
 @keyframes gradient {
@@ -172,7 +172,7 @@ h1 {
     rgba(255, 53, 53, 0.4) 98.63%
   );
   background-size: 300% 300%;
-  animation: gradient 14s ease infinite;
+  	animation: gradient 14s ease infinite;
 }
 
 .card-container {
