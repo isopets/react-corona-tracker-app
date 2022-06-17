@@ -2,7 +2,7 @@ import Header from "../components/Header";
 import Title from "../components/Title";
 import Selector from "../components/Selector";
 import Results from "../components/Results";
-import {TopPageType} from "../types";
+import { TopPageType } from "../types";
 
 const TopPage = ({
   countriesJson,
