@@ -32,7 +32,7 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/hello">
+        <Route ex>
           <TopPage
             countriesJson={countriesJson}
             setCountry={setCountry}

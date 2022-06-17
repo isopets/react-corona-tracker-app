@@ -2,7 +2,7 @@ import {useState} from "react";
 import countriesJson from "./countries.json";
 import TopPage from "./pages/TopPage";
 import "./App.css";
-import {Route, Switch, BrowserRouter} from "react-router-dom";
+import {Route, Switch, BrowserRouter} from "react-router-dom"
 
 function App() {
   const [country, setCountry] = useState("");
@@ -30,18 +30,15 @@ function App() {
       });
   };
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/hello">
-          <TopPage
-            countriesJson={countriesJson}
-            setCountry={setCountry}
-            getCountryData={getCountryData}
-            countryData={countryData}
-          />
-        </Route>
-      </Switch>
-    </BrowserRouter>
+    <Bro
+    <div>
+      <TopPage
+        countriesJson={countriesJson}
+        setCountry={setCountry}
+        getCountryData={getCountryData}
+        countryData={countryData}
+      />
+    </div>
   );
 }
 

@@ -32,14 +32,13 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/hello">
+        <div>
           <TopPage
             countriesJson={countriesJson}
             setCountry={setCountry}
             getCountryData={getCountryData}
             countryData={countryData}
           />
-        </Route>
       </Switch>
     </BrowserRouter>
   );
