@@ -1,6 +1,7 @@
 const Card = props => {
   return (
     <div>
+      <button onClick={props.getAllCountriesData}>Get All Data</button>
       {props.allCountriesData.map((singleData, index) => (
         <div key={index}>
           <h2>{singleData.Country}</h2>

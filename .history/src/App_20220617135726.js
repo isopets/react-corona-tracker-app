@@ -32,11 +32,7 @@ function App() {
       });
   };
 
-  useEffect(() => {
-    fetch("https://api.covid19api.com/summary")
-      .then(res => res.json())
-      .then(data => setAllCountriesData(data.Countries));
-  }, []);
+  useEffect(() => {});
   return (
     <BrowserRouter>
       <Switch>
@@ -49,7 +45,10 @@ function App() {
           />
         </Route>
         <Route exact path="/world">
-          <WorldPage allCountriesData={allCountriesData} />
+          <WorldPage
+            getAllCountriesData={getAllCountriesData}
+            allCountriesData={allCountriesData}
+          />
         </Route>
       </Switch>
     </BrowserRouter>

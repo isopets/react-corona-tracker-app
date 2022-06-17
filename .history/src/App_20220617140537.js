@@ -33,10 +33,11 @@ function App() {
   };
 
   useEffect(() => {
+    console.log("テスト");
     fetch("https://api.covid19api.com/summary")
       .then(res => res.json())
       .then(data => setAllCountriesData(data.Countries));
-  }, []);
+  });
   return (
     <BrowserRouter>
       <Switch>
