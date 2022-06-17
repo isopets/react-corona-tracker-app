@@ -4,7 +4,6 @@ import countriesJson from "./countries.json";
 import TopPage from "./pages/TopPage";
 import WorldPage from "./pages/WorldPage";
 import "./App.css";
-import {CountryDataType, AllCountriesDataType} from "./types";
 
 function App() {
   const [loading, setLoading] = useState<boolean>(false);

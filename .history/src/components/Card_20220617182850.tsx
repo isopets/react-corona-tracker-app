@@ -1,5 +1,15 @@
 import {CardType} from "../types";
 
+interface SingleCountriesDataType {
+  Country: string;
+  NewConfirmed: number;
+  TotalConfirmed: number;
+}
+
+interface CardType {
+  allCountriesData: Array<SingleCountriesDataType>;
+}
+
 const Card = ({allCountriesData}: CardType) => {
   return (
     <div className="card-container">

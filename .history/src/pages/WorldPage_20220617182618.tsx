@@ -2,7 +2,14 @@ import Header from "../components/Header";
 import Title from "../components/Title";
 import Card from "../components/Card";
 import {WorldPageType} from "../types";
-
+interface SingleCountriesDataType {
+  Country: string;
+  NewConfirmed: number;
+  TotalConfirmed: number;
+}
+interface WorldPageType {
+  allCountriesData: Array<SingleCountriesDataType>;
+}
 const WorldPage = ({allCountriesData}: WorldPageType) => {
   return (
     <div className="world-page-container">

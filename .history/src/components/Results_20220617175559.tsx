@@ -1,6 +1,16 @@
 import Loading from "./Loading";
 import {ResultsType} from "../types";
 
+type ResultsType = {
+  countryData: {
+    date: "string";
+    newConfirmed: 0;
+    totalConfirmed: 0;
+    newRecovered: 0;
+    totalRecovered: 0;
+  };
+  loading: boolean;
+};
 const Results = ({countryData, loading}: ResultsType) => {
   const {date, newConfirmed, totalConfirmed, newRecovered, totalRecovered} =
     countryData;
