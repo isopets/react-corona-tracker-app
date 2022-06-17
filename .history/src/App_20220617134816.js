@@ -49,10 +49,7 @@ function App() {
           />
         </Route>
         <Route exact path="/world">
-          <WorldPage
-            getAllCountriesData={getAllCountriesData}
-            allCountriesData={allCountriesData}
-          />
+          <WorldPage />
         </Route>
       </Switch>
     </BrowserRouter>
