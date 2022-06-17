@@ -7,7 +7,7 @@ import "./App.css";
 
 function App() {
   const [loading, setLoading] = useState(false);
-  const [country, setCountry] = useState("japan");
+  const [country, setCountry] = useState("");
   const [countryData, setCountryData] = useState({
     date: "",
     newConfirmed: "",
@@ -40,8 +40,7 @@ function App() {
           )
         );
     };
-    getCountryData();
-  }, [country]);
+  });
 
   useEffect(() => {
     fetch("https://api.covid19api.com/summary")
@@ -60,8 +59,8 @@ function App() {
           <TopPage
             countriesJson={countriesJson}
             setCountry={setCountry}
+            getCountryData={getCountryData}
             countryData={countryData}
-            loading={loading}
           />
         </Route>
         <Route exact path="/world">

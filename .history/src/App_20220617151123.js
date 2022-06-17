@@ -60,8 +60,8 @@ function App() {
           <TopPage
             countriesJson={countriesJson}
             setCountry={setCountry}
+            getCountryData={getCountryData}
             countryData={countryData}
-            loading={loading}
           />
         </Route>
         <Route exact path="/world">

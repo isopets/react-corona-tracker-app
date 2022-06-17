@@ -84,7 +84,7 @@ h1 {
 .selector-container > select {
   border-radius: 40px 40px 40px 40px;
   border: transparent;
-  width: 498px;
+  width: 400px;
   height: 27px;
   padding: 0.5rem 1rem;
   appearance: none;

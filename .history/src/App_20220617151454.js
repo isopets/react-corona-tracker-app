@@ -61,7 +61,6 @@ function App() {
             countriesJson={countriesJson}
             setCountry={setCountry}
             countryData={countryData}
-            loading={loading}
           />
         </Route>
         <Route exact path="/world">

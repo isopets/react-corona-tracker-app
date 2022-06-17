@@ -7,7 +7,7 @@ import "./App.css";
 
 function App() {
   const [loading, setLoading] = useState(false);
-  const [country, setCountry] = useState("japan");
+  const [country, setCountry] = useState("");
   const [countryData, setCountryData] = useState({
     date: "",
     newConfirmed: "",
@@ -17,8 +17,8 @@ function App() {
   });
   const [allCountriesData, setAllCountriesData] = useState([]);
 
-  useEffect(() => {
-    const getCountryData = () => {
+
+    useEffect(() => {const getCountryData = () => {
       setLoading(true);
       fetch(`https://api.covid19api.com/country/${country}`)
         .then(res => res.json())
@@ -38,11 +38,9 @@ function App() {
           alert(
             "エラーが発生しました。ページをリロードして、もう一度トライしてください。"
           )
-        );
-    };
-    getCountryData();
-  }, [country]);
-
+        )
+      });
+  };
   useEffect(() => {
     fetch("https://api.covid19api.com/summary")
       .then(res => res.json())
@@ -60,8 +58,8 @@ function App() {
           <TopPage
             countriesJson={countriesJson}
             setCountry={setCountry}
+            getCountryData={getCountryData}
             countryData={countryData}
-            loading={loading}
           />
         </Route>
         <Route exact path="/world">

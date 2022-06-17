@@ -8,6 +8,7 @@ const Selector = ({setCountry, countriesJson}) => {
           </option>
         ))}
       </select>
+      <button onClick={getCountryData}>Get Data</button>
     </div>
   );
 };

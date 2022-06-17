@@ -9,7 +9,11 @@ const TopPage = ({countriesJson, setCountry, countryData, loading}) => {
       <div>
         <Header />
         <Title />
-        <Selector countriesJson={countriesJson} setCountry={setCountry} />
+        <Selector
+          countriesJson={countriesJson}
+          setCountry={setCountry}
+          getCountryData={getCountryData}
+        />
         <Results countryData={countryData} loading={loading} />
       </div>
     </div>

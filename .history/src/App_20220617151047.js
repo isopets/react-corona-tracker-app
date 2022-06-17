@@ -41,7 +41,7 @@ function App() {
         );
     };
     getCountryData();
-  }, [country]);
+  }, []);
 
   useEffect(() => {
     fetch("https://api.covid19api.com/summary")
@@ -60,8 +60,8 @@ function App() {
           <TopPage
             countriesJson={countriesJson}
             setCountry={setCountry}
+            getCountryData={getCountryData}
             countryData={countryData}
-            loading={loading}
           />
         </Route>
         <Route exact path="/world">
